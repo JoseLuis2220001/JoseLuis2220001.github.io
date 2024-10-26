@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cell.x::before {
+    content: "X";
+    color: blue;
+    font-size: 2em;
+}
+
+.cell.o::before {
+    content: "O";
+    color: red;
+    font-size: 2em;
+}
+
+
+#restartButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#scoreboard {
+    margin-top: 30px;
+    width: 300px;
+    text-align: left;
+}
+
+#scoreboard ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#scoreboard li {
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #e0e0e0;
+}
